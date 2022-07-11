@@ -6,6 +6,10 @@ html, body{
     height: 100%;
 }
 
+.swal-height {
+    height: 80px;
+}
+
 header{
     width: 100%;
     height: 9%;
@@ -254,4 +258,47 @@ a span {
     justify-content: center;
     align-items: center;
     position:static;
+}
+/*menu de opciones*/
+.login3{
+    width: 80%;
+    height: 500px;
+    border-radius: 30px;
+    background-color: hsl(77, 100%, 63%, 0.8) ;
+    border: 6px black solid;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.com{
+    border: 3px black solid;
+    font-size: 30px;
+    width: 25%;
+    position: sticky;
+    top: 0%;
+    background-color: #f03755;
+}
+
+.login3 table{
+    margin: auto;
+    width: 100%;
+}
+
+.contenedor{
+    width: 95%;
+    height: 95%;
+    overflow: scroll;
+}
+
+.dia{
+    height: 70px;
+    font-size: 30px;
+    width: 25%;
+    border: 3px black solid;
+}
+
+.dia td{
+    margin: auto;
 }

@@ -8,6 +8,10 @@ html, body{
     height: 100%;
 }
 
+.swal-height {
+    height: 80px;
+}
+
 header{
     width: 100%;
     height: 9%;
@@ -42,7 +46,7 @@ header div{
 a span {
     background: #d0e0eb;
     display: block;
-    padding: 5px ;
+    padding: 5px 15px;
     border-radius: 5px;
     border: 2px solid #000;
   }
@@ -163,31 +167,14 @@ a span {
     height: 80px;
 }
 
-.a1{
-    width: 30%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
 .a3{
-    width: 35%;
-    height: 30%;
-    margin-left: 10px;
-    text-align: center;
-    font-size: 30px;
-    text-decoration: underline;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.a2{
-    width: 30%;
-    height: 80%;
+    width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 
 @font-face {
