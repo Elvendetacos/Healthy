@@ -1,7 +1,7 @@
 const conexion = require('./conectar')
-const CrearJson = require('../LocalData/CrearJson');
+//const JsonChido = require('../Index.json');
 const Swal = require('sweetalert2')
-
+const CrearJson = require('../LocalData/CrearJson');
 function validarIS(){
     let user = document.getElementById("txtuser").value;
     let pass = document.getElementById("txtpass").value;
@@ -15,15 +15,15 @@ function validarIS(){
         }
         else {
             console.log("todo bien", rows, fields)
-
+            
             if (rows.length == 0) {
                 Swal.fire({
                     heightAuto: false,
                     title: 'Error!',
-                    text: 'Usuario invalido',
+                    text: 'Uario o contraseña invalidos',
                     icon: 'error',
-                    confirmButtonText: 'Cool',
-                    width:'500px',
+                    confirmButtonText: 'OK',
+                    width:'500px',      
                 })
             }
 

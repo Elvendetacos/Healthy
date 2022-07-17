@@ -13,12 +13,15 @@ function registrar() {
         }
         else {
             console.log("todo bien", rows, fields)
-
-            if (rows.length == 0) {
-                insertar(user,pass);
-            }
-            else {
-                alert("ya existe un registro igual");
+            if(pass==""||user==""){
+                alert("mi compa el pendejo")
+            }else{
+                if (rows.length == 0) {
+                    insertar(user,pass);
+                }
+                else {
+                    alert("ya existe un registro igual");
+                }
             }
         }
 

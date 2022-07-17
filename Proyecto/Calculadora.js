@@ -1,5 +1,6 @@
 const conexion = require('./conectar');
 const JsonChido = require('../Index.json');
+const { default: Swal } = require('sweetalert2');
 let id = JsonChido.id_usuario;
 let usuario = JsonChido.Nombre;
 function calcular(){
@@ -8,6 +9,16 @@ var pe = document.getElementById('peso').value;
 var al = document.getElementById('altura').value;
 var se = document.getElementById('sexo').value;
 var ac = document.getElementById('activ').value;
+if(ed<=15 || pe<=30 || al<=120){
+    Swal.fire({
+        heightAuto: false,
+        title: 'Datos no validos',
+        text: '',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        width:'500px',    
+    })
+}else{
 if(ed===''||pe===''||al===''||se===''||ac===''){
     alert("Error")
 }else{
@@ -24,9 +35,7 @@ if(ed===''||pe===''||al===''||se===''||ac===''){
         switch (parseInt(ac)) {
             case 1:
               calorias = calorias * 1.2;
-              
-              console.log(calorias);
-             break;
+              break;
                 
             case 2:
                 calorias = calorias * 1.375;
@@ -48,18 +57,48 @@ if(ed===''||pe===''||al===''||se===''||ac===''){
               break;  
         }
         let final = Math.round(calorias);
-        insertCalorias(final);
-        myvariable=Genial: '+usuario+'\n'+'Tus calorias diarias son: ' + final;
-        Swal.fire({
-            heightAuto: false,
-            text: '',
-            icon: 'success',
-            confirmButtonText: 'Cool',
-            width:'500px',
-        })
+        validacion(final)
     }
 }
 
+function validacion(final){
+    var xd1 = 'Genial! '+usuario+'  '+'Tus calorias diarias son: ' + final;
+    $query = `SELECT * FROM calorias WHERE users_id_user=${id}`;
+    conexion.query($query, function (err, rows, fields) {
+        if (err) {
+            console.log("Error en el query");
+            console.log(err);
+            return;
+        }
+        else {
+            console.log("todo bien", rows, fields)
+    
+            if (rows.length == 0) {
+                Swal.fire({
+                    heightAuto: false,
+                    title: 'Guardado',
+                    text: xd1,
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    width:'500px',    
+                })
+                insertCalorias(final);
+            }else{
+                let resp=rows[0].Ncalorias;
+                Swal.fire({
+                    heightAuto: false,
+                    title: 'Encontramos datos ya registrados',
+                    text: 'Tus calorias son: '+resp,
+                    icon: 'info',
+                    confirmButtonText: 'OK',
+                    width:'500px', 
+                })
+                }
+            }
+    
+    })
+}
+}
 function insertCalorias(calorias) {
     console.log(id)
     $query = `INSERT INTO calorias (Ncalorias, users_id_user) VALUES ('${calorias}','${id}')`;

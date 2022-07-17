@@ -63,9 +63,9 @@ a span {
 .login{
     width: 40%;
     height: 500px;
-    border-radius: 30px;
-    background-color: hsl(77, 100%, 63%, 0.8) ;
-    border: 6px black solid;
+    border-radius: 12px;
+    background-color: hsl(93, 73%, 75%, 0.8) ;
+    border: 3px black solid;
 }
 
 .parte1{
@@ -105,8 +105,8 @@ a span {
     height: 50px;
     font-size: 30px;
     text-align: center;
-    border: 4px black solid;
-    border-radius: 30px;
+    border: 3px black solid;
+    border-radius: 12px;
 }
 
 .form{
@@ -137,9 +137,9 @@ a span {
 .login2{
     width: 50%;
     height: 500px;
-    border-radius: 30px;
-    background-color: hsl(77, 100%, 63%, 0.8) ;
-    border: 6px black solid;
+    border-radius: 12px;
+    background-color: hsl(93, 73%, 75%, 0.8) ;
+    border: 3px black solid;
     overflow: scroll;
 }
 
@@ -173,7 +173,7 @@ a span {
 .t2{
     width: 25%;
     height: 100%;
-    border: 3px red solid;
+    border: 3px black solid;
     background-color: #ebf7f8;
 
 }
@@ -181,8 +181,8 @@ a span {
 .t3{
     width: 20%;
     height: 100%;
-    border: 3px red solid;
-    border-top-right-radius: 20px;
+    border: 3px black solid;
+    border-top-left-radius: 5px;
     background-color: #ebf7f8;
 
 }
@@ -192,8 +192,8 @@ a span {
     height: 100%;
     background-color: transparent;
     border: none;
-    border: 3px red solid;
-    border-top-left-radius: 20px;
+    border: 3px black solid;
+    border-top-left-radius: 5px;
     transition: all 0.5s;
     background-color: #ebf7f8;
 }
@@ -228,28 +228,28 @@ a span {
     width: 50%;
     height: 0%;
     background-color: orange;
-    box-shadow: 0 0 3px 3px black inset;
+    box-shadow: 0 0 2px 2px black inset;
 }
 
 .b2{
     width: 25%;
     height: 10%;
     background-color: orange;
-    box-shadow: 0 0 3px 3px black inset;
+    box-shadow: 0 0 2px 2px black inset;
 }
 
 .b3{
     width: 10%;
     height: 10%;
     background-color: orange;
-    box-shadow: 0 0 3px 3px black inset;
+    box-shadow: 0 0 2px 2px black inset;
 }
 
 .b4{
     width: 10%;
     height: 10%;
     background-color: orange;
-    box-shadow: 0 0 3px 3px black inset;
+    box-shadow: 0 0 2px 2px black inset;
 }
 .gen{
     width: 100%;
@@ -262,43 +262,106 @@ a span {
 /*menu de opciones*/
 .login3{
     width: 80%;
-    height: 500px;
-    border-radius: 30px;
-    background-color: hsl(77, 100%, 63%, 0.8) ;
-    border: 6px black solid;
+    height: 530px;
     overflow: scroll;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*background-color: #000;*/
 }
 
 .com{
-    border: 3px black solid;
     font-size: 30px;
     width: 25%;
+    height: 30px;
     position: sticky;
     top: 0%;
-    background-color: #f03755;
+    background-color: rgba(245, 234, 234);
 }
 
-.login3 table{
+.tabla1{
     margin: auto;
     width: 100%;
+    position: sticky;
+    top: 0%;
+}
+
+.tabla2{
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(245, 234, 234, 0.8) ;
+}
+
+.tabla1 th{
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
+}
+
+.tabla2 th{
+    border-right: 3px black solid;
+    border-bottom: 3px black solid;
 }
 
 .contenedor{
     width: 95%;
-    height: 95%;
+    height: 80%;
     overflow: scroll;
+    border: 5px black solid;
+    border-bottom: none;
+    margin: auto;
 }
+
+.pl{
+    margin: auto;
+    border: 5px black solid;
+    width: 95%;
+    height: 15%;
+    background-color: aliceblue;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245, 234, 234, 0.8) ;
+}
+
+/*.contenedor table td{
+    border: 3px black solid;
+}*/
+
+.sleccion{
+    background-image: url(Resources/a.png); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: center;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    height: 30px;
+    width: 80%;
+    border: 2px black solid;
+    border-radius: 30px;
+    appearance: none;
+    text-align: center;
+}
+
+.sleccion::-ms-expand {
+    display: none;
+}
+
+
+.content-select:hover i{
+	margin-top: 40px;
+}
+
 
 .dia{
     height: 70px;
     font-size: 30px;
     width: 25%;
-    border: 3px black solid;
 }
 
-.dia td{
-    margin: auto;
+@font-face {
+    font-family: 'xd';
+    src: url('Resources/CHEESEB_.TTF');
 }
