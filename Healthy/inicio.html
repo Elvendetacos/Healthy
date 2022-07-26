@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css">
+    <script src="sesion.js"></script>
+    <script src="reg.js"></script>
+</head>
+<body>
+    <div class="divchikito">
+        <div class="grande" id="grande">
+            <div class="login" id="po">
+                <div class="ini">
+                    <p><b>Inicio de sesión</b></p>
+                </div>
+                <div class="lic">
+                    <div>
+                        <input type="text" id="usr" title="Usuario" placeholder="Usuario">
+                    </div>
+                    <div>
+                        <input type="password" id="pss" title="Contraseña" placeholder="Contraseña">                   
+                    </div>
+                </div>
+                <div class="btm">
+                    <div>
+                        <button onclick="validarIS()">INICIAR SESIÓN</button>
+                    </div>
+                    <div>
+                        <a onclick="sig()">REGISTRARSE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="registro" id="po">
+                <div class="ini">
+                    <p><b>Registro</b></p>
+                </div>
+                <div class="lic">
+                    <div>
+                        <input type="text" title="Usuario" id="usr1" placeholder="Nuevo usuario">
+                    </div>
+                    <div>
+                        <input type="password" title="Contraseña" id="pss1" placeholder="Nueva contraseña">                   
+                    </div>
+                </div>
+                <div class="btm">
+                    <div>
+                        <button onclick="registrar()">REGISTARSE</button>
+                    </div>
+                    <div>
+                        <a onclick="ant()">REGRESAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="inicio.js"></script> 
+</body>
+</html>

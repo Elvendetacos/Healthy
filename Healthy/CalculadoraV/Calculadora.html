@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculadora.css">
+</head>
+
+<body>
+    <div class="divi">
+        <div class="titulo">
+            <p><b>HEALTHY</b></p>
+        </div>
+        <div class="contenedor" id="contenedor">
+            <div class="calc1" id="pieza1">
+                <div class="division">
+                    <div class="contenido">
+                        <div class="float">
+                            <div class="titulo1"><p><b>¿Cuál es tu sexo?</b></p></div>
+                            <div class="division1">
+                                <input type="radio" name="sexo" id="Masculino" value="Masculino" class="Masculino">
+                                <label for="Masculino" class="genero" id="masculino"><img src="../recursos/hombre.png" alt=""></label>
+                                <input type="radio" name="sexo" id="Femenino" value="Femenino" class="Femenino">
+                                <label for="Femenino" class="genero" id="femenino"><img src="../recursos/mujer (1).png" alt=""></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <div class="float">
+                            <div class="titulo1"><p><b>¿Cuántos años tienes?</b></p></div>
+                            <div class="division1">
+                                <div class="años">
+                                    <input type="number" name="" id="años" class="IngAños"><p><b>Años</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton">
+                    <button onclick="location.href='../Menuchikito.html'" class="salir">&lt;</button>
+                    <button onclick="pesoyaltura()" class="boton1"><b>Continuar</b></button>
+                </div>
+            </div>
+            <div class="calc2" id="pieza1">
+                <div class="division">
+                    <div class="contenido">
+                        <div class="float">
+                            <div class="titulo1"><p><b>¿Cuánto pesas?</b></p></div>
+                            <div class="division1">
+                                <div class="Peso">
+                                    <input type="number" name="" id="Peso" class="IngAños"><p><b>Kg</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <div class="float">
+                            <div class="titulo1"><p><b>¿Cuánto mides?</b></p></div>
+                            <div class="division1">
+                                <div class="Altura">
+                                    <input type="number" name="" id="Altura" class="IngAños"><p><b>CM</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton">
+                    <button onclick="edadysexo()" class="boton1">Anterior</button>
+                    <button onclick="Actividad()" class="boton1">Continuar</button>
+                </div>
+            </div>
+            <div class="calc3" id="pieza1">
+                <div class="division">
+                    <div class="conteiner">
+                        <div class="activ">
+                            <div class="titulo2"><p><b>¿Cuál es tu actividad diaria?</b></p></div>
+                            <div class="seleccion">
+                                <input type="radio" name="Act" id="sentado" value="1">
+                                <label for="sentado"><img src="../recursos/sala-de-espera.png" alt=""><p><b>Poco o ningún ejercicio</b><br>Mayor parte del tiempo sentado.</p></label>
+                                <input type="radio" name="Act" id="ligero" value="2">
+                                <label for="ligero"><img src="../recursos/persona-de-pie.png" alt=""><p><b>Ejercicio ligero</b><br><br>Ejercicio de 1 a 3 veces por semana.</p></label>
+                                <input type="radio" name="Act" id="medio" value="3">
+                                <label for="medio"><img src="../recursos/para-caminar.png" alt=""><p><b>Ejercicio moderado</b><br>Ejercicio de 3 a 5 veces por semana.</p></label>
+                                <input type="radio" name="Act" id="avanzado" value="4">
+                                <label for="avanzado"><img src="../recursos/persona.png" alt=""><p><b>Ejercicio fuerte</b><br><br>Ejercicio de 6 a 7 veces por semana.</p></label>
+                                <input type="radio" name="Act" id="pesado" value="5">
+                                <label for="pesado"><img src="../recursos/puntuacion-de-jugador-de-baloncesto.png" alt=""><p><b>Ejercicio muy fuerte</b><br>Entrenamientos de más de 4 horas diarias.</p></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton">
+                    <button onclick="Estatura()" class="boton1">Anterior</button>
+                    <button onclick="calcular()" class="boton1">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Calculadora.js"></script>
+    <script src="SliderC.js"></script>
+</body>
+
+</html>

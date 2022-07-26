@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Menuchikito.css">
+</head>
+
+<body onload="cargar()">
+    <div class="divi">
+        <div class="encabezado">
+            <div class="logo"><a onclick="cerrarS()">Cerrar Sesión</a></div>
+            <div class="casita">HEALTHY</div>
+            <div class="usuario"><img src="recursos/usuario.png" alt=""><p id="us"></p></div>
+        </div>
+        <div class="cuerpo">
+            <div class="separacion separacion1">
+                <div class="calculadora">
+                    <div class="imagen1">
+                        <div class="nombre" onclick="calculadora()">
+                            <p>Calculadora de calorias</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="separacion separacion2">
+                <div class="menufinal"><div class="imagen2">
+                    <div class="nombre2" onclick="Reporte()">
+                    <p>Reporte</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="separacion separacion3">
+                <div class="reporte"><div class="imagen3">
+                    <div class="nombre3" onclick="Menu()">
+                        <p>Calculo semanal</p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="Menuchikito.js"></script>
+</body>
+
+</html>
